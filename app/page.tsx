@@ -28,8 +28,8 @@ const projects = [
       'A multi-service Docker Compose data and ML pipeline for 1.6 million tweets. Data moves through ingestion, HDFS storage, Spark ETL and model inference, then reaches a FastAPI-backed monitoring dashboard.',
     tags: ['Spark', 'Kafka', 'Airflow', 'HDFS', 'Docker', 'FastAPI'],
     flow: ['Kafka', 'HDFS', 'Spark', 'FastAPI'],
-    resultLabel: 'Verified throughput',
-    result: '222 → 1,176 records/sec',
+    resultLabel: 'Pipeline scope',
+    result: 'Batch ETL · simulated streaming',
     href: 'https://github.com/tonthatgiahuy16/social-media-sentiment-bigdata-pipeline',
     tone: 'blue',
   },
@@ -131,18 +131,18 @@ export default function Home() {
             </p>
             <span className="note-location">HCMC · Vietnam</span>
           </aside>
-          <div className="signal-row" aria-label="Selected project results">
+          <div className="signal-row" aria-label="Portfolio highlights">
             <div>
               <strong>1.6M</strong>
               <span>Tweets processed</span>
             </div>
             <div>
-              <strong>+429%</strong>
-              <span>Pipeline throughput</span>
+              <strong>3</strong>
+              <span>Featured projects</span>
             </div>
             <div>
-              <strong>3×</strong>
-              <span>Storage compression</span>
+              <strong>2027</strong>
+              <span>Expected graduation</span>
             </div>
           </div>
         </section>
