@@ -1,7 +1,6 @@
 const links = {
   github: 'https://github.com/tonthatgiahuy16',
-  linkedin:
-    'https://www.linkedin.com/in/t%C3%B4n-th%E1%BA%A5t-gia-huy-708860369/',
+  linkedin: 'https://www.linkedin.com/in/ton-that-gia-huy/',
   email: 'mailto:tonthatgiahuy160505@gmail.com',
   resume: '/Ton-That-Gia-Huy-Resume.pdf',
 };
@@ -12,7 +11,7 @@ const projects = [
     label: 'Personal project · 2026–Present',
     title: 'CloudMentor AI',
     description:
-      'An in-progress RAG API prototype for turning uploaded PDFs into traceable, source-grounded retrieval. The current implementation covers ingestion, chunking, Chroma indexing, metadata propagation, input validation, and a PostgreSQL document-registry foundation.',
+      'An in-progress document-data API that turns uploaded PDFs into traceable retrieval. The current implementation covers modular ingestion, PostgreSQL document lifecycle records, Chroma indexing, metadata lineage, input validation, automated tests, and GitHub Actions CI.',
     tags: ['Python', 'FastAPI', 'RAG', 'Chroma', 'PostgreSQL', 'Alembic'],
     flow: ['PDF', 'Chunks', 'Embeddings', 'Retrieval'],
     resultLabel: 'Current pipeline',
@@ -25,11 +24,11 @@ const projects = [
     label: 'Coursework project · Jan–May 2026',
     title: 'Social Sentiment Pipeline',
     description:
-      'A multi-service Docker Compose data and ML pipeline for 1.6 million tweets. Data moves through ingestion, HDFS storage, Spark ETL and model inference, then reaches a FastAPI-backed monitoring dashboard.',
-    tags: ['Spark', 'Kafka', 'Airflow', 'HDFS', 'Docker', 'FastAPI'],
-    flow: ['Kafka', 'HDFS', 'Spark', 'FastAPI'],
-    resultLabel: 'Pipeline scope',
-    result: 'Batch ETL · simulated streaming',
+      'A coursework batch workflow over approximately 1.6 million Sentiment140 records using PySpark, partitioned Parquet, and HDFS. The repository also includes FastAPI endpoints backed by MongoDB, a separate synthetic Kafka streaming demo, and an Airflow scheduling prototype.',
+    tags: ['PySpark', 'Kafka demo', 'Airflow prototype', 'HDFS', 'Docker', 'FastAPI'],
+    flow: ['Sentiment140', 'HDFS', 'PySpark', 'Parquet'],
+    resultLabel: 'Verified scope',
+    result: 'Batch ETL · prototype streaming',
     href: 'https://github.com/tonthatgiahuy16/social-media-sentiment-bigdata-pipeline',
     tone: 'blue',
   },
@@ -59,7 +58,7 @@ const skillGroups = [
   },
   {
     title: 'Data engineering',
-    items: ['Apache Spark', 'Kafka', 'Airflow', 'HDFS', 'ETL pipelines'],
+    items: ['Apache Spark', 'PySpark', 'Kafka fundamentals', 'Airflow fundamentals', 'HDFS', 'ETL pipelines'],
   },
   {
     title: 'Databases & tools',
@@ -97,12 +96,13 @@ export default function Home() {
               <span className="status-dot" /> Open to internship opportunities
             </p>
             <h1>
-              Building practical systems where <em>AI meets data.</em>
+              Building reliable <em>data pipelines</em> and backend systems.
             </h1>
             <p className="hero-copy">
-              I&apos;m Tôn Thất Gia Huy, a Data Science student in Ho Chi Minh City.
-              I build document-retrieval prototypes, data pipelines, and backend
-              APIs—and validate them with measurable results.
+              I&apos;m Tôn Thất Gia Huy, a final-year Data Science student in Ho Chi
+              Minh City focused on Data Engineering and backend systems. I build
+              Python data workflows and APIs with traceable data flows, automated
+              testing, and clear documentation.
             </p>
             <div className="hero-actions">
               <a
@@ -126,15 +126,15 @@ export default function Home() {
           <aside className="hero-note" aria-label="Current focus">
             <span className="note-index">Currently</span>
             <p>
-              Learning how retrieval, data quality, and backend design shape
-              trustworthy AI products.
+              Improving data pipelines, retrieval quality, and backend reliability
+              through hands-on projects.
             </p>
             <span className="note-location">HCMC · Vietnam</span>
           </aside>
           <div className="signal-row" aria-label="Portfolio highlights">
             <div>
               <strong>1.6M</strong>
-              <span>Tweets processed</span>
+              <span>Coursework records processed</span>
             </div>
             <div>
               <strong>3</strong>
@@ -152,8 +152,8 @@ export default function Home() {
             <p className="section-kicker">01 / Selected work</p>
             <h2>Projects built to learn by shipping.</h2>
             <p>
-              Three working implementations across applied AI, data engineering,
-              and machine learning—with scope, ownership, and outcomes stated
+              Three projects across data engineering, backend development, and
+              machine learning—with scope, ownership, and limitations stated
               explicitly.
             </p>
           </header>
@@ -205,9 +205,9 @@ export default function Home() {
               <h3>Smart Library Management System</h3>
             </div>
             <p>
-              Built a library-management application with C# and SQL Server;
-              applied PMBOK and PERT/CPM to shorten the project schedule by 33%
-              while maintaining budget control (CPI = 1.05). Code is not public.
+              Built a database-backed library-management application with C# and
+              SQL Server and applied structured project planning. Code is not
+              public.
             </p>
           </article>
         </section>
@@ -226,10 +226,11 @@ export default function Home() {
               in 2027.
             </p>
             <p>
-              My strongest work sits between disciplines: designing data flows,
-              exposing services through APIs, and evaluating whether an AI or ML
-              system actually works. I value readable code, measurable results,
-              and documentation that helps the next person continue the work.
+              My strongest work connects data processing with backend services:
+              designing traceable data flows, storing reliable system state, and
+              exposing results through APIs. I value readable code, automated
+              checks, and documentation that helps the next person continue the
+              work.
             </p>
             <dl className="facts">
               <div>
@@ -242,7 +243,7 @@ export default function Home() {
               </div>
               <div>
                 <dt>English</dt>
-                <dd>B2 working proficiency</dd>
+                <dd>Technical reading and working communication</dd>
               </div>
             </dl>
           </div>
@@ -268,9 +269,8 @@ export default function Home() {
           <p className="section-kicker">04 / Contact</p>
           <h2>Have a real problem worth solving?</h2>
           <p>
-            I&apos;m looking for internship opportunities in AI application
-            engineering, data engineering, or backend development in Ho Chi Minh
-            City.
+            I&apos;m looking for Data Engineering, data-focused Backend, or related
+            internship and fresher opportunities in Ho Chi Minh City.
           </p>
           <a className="email-address" href={links.email}>
             tonthatgiahuy160505@gmail.com
