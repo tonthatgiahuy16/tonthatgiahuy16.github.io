@@ -3,18 +3,17 @@ import './globals.css';
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  'https://ton-that-gia-huy-portfolio.gpt-business-6794.chatgpt.site';
+  'https://tonthatgiahuy16.github.io';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Tôn Thất Gia Huy | Data Engineering & Backend Portfolio',
   description:
-    'Portfolio of Tôn Thất Gia Huy, a final-year Data Science student building data pipelines, backend APIs, and document-data systems.',
+    'Portfolio of Tôn Thất Gia Huy, focused on reliable data pipelines, backend APIs, lifecycle, recovery, and document-data systems.',
   authors: [{ name: 'Tôn Thất Gia Huy' }],
   creator: 'Tôn Thất Gia Huy',
   keywords: [
     'Tôn Thất Gia Huy',
-    'Data Science Student',
     'Data Engineering',
     'Backend Engineering',
     'Python',
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tôn Thất Gia Huy | Data Engineering & Backend',
     description:
-      'Final-year Data Science student building traceable data pipelines and backend APIs.',
+      'Building traceable data pipelines and reliable backend systems with explicit lifecycle, recovery, and verification.',
     url: '/',
     siteName: 'Tôn Thất Gia Huy Portfolio',
     type: 'website',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tôn Thất Gia Huy | Data Engineering & Backend',
     description:
-      'Final-year Data Science student building traceable data pipelines and backend APIs.',
+      'Building traceable data pipelines and reliable backend systems with explicit lifecycle, recovery, and verification.',
     images: ['/og.png'],
   },
 };

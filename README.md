@@ -1,6 +1,6 @@
 # Tôn Thất Gia Huy — Portfolio
 
-Personal portfolio highlighting data engineering, backend, and applied machine-learning projects.
+An engineering-dossier portfolio focused on Data Engineering and data-intensive Backend work.
 
 ## Live site
 
@@ -8,11 +8,11 @@ Personal portfolio highlighting data engineering, backend, and applied machine-l
 
 ## Featured work
 
-- CloudMentor AI — document-data API prototype with traceable PDF ingestion and retrieval
+- CloudMentor AI — multi-format document-data platform with lifecycle, recovery, source storage, and bounded reconciliation
 - Social Sentiment Pipeline — coursework batch workflow over approximately 1.6M Sentiment140 records
-- Employee Attrition Prediction — classification workflow with imbalance handling and model comparison
+- OpsBrain — in-progress data contracts, immutable versions, and PostgreSQL ingestion lifecycle project
 
 ## Core stack
 
-Python, FastAPI, SQL, PostgreSQL, PySpark, HDFS, Docker, Git, plus Kafka and Airflow fundamentals.
+Python, SQL, FastAPI, PostgreSQL, PySpark, HDFS, Parquet, Chroma, MinIO, Docker, Git, and Alembic, plus Kafka and Airflow fundamentals.
 
