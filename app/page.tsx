@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const links = {
   github: 'https://github.com/tonthatgiahuy16',
   linkedin: 'https://www.linkedin.com/in/ton-that-gia-huy/',
@@ -8,16 +10,21 @@ const links = {
 const projects = [
   {
     number: '01',
-    status: 'Implemented baseline',
+    status: 'Implemented baseline · local demo verified',
     label: 'Personal project · 2026–Present',
     title: 'CloudMentor AI',
     summary: 'A document-data platform built around recoverable ingestion, explicit lifecycle state, and traceable retrieval.',
-    description: 'PDF, TXT, and DOCX sources flow through FastAPI into a PostgreSQL document registry and a rebuildable Chroma index. Local and MinIO source storage, guarded migration, retry and recovery paths, concurrent duplicate protection, and bounded reconciliation make the data path inspectable instead of disposable.',
+    description: 'PDF, TXT, and DOCX sources flow through FastAPI into a PostgreSQL document registry and a rebuildable Chroma index. Local and MinIO source storage, guarded migration, retry and recovery paths, concurrent duplicate protection, and bounded reconciliation make the data path inspectable instead of disposable. A controlled local demo seeds four public learning sources, blocks public mutations, and exposes source-grounded chat.',
     flow: ['Source storage', 'Lifecycle registry', 'Extraction', 'Derived index', 'Retrieval'],
-    evidence: ['PDF / TXT / DOCX lineage', 'PostgreSQL + Chroma reconciliation', 'MinIO recovery integration checks'],
-    limits: 'Local and CI evidence; no production deployment, external-scale benchmark, or production authentication claim.',
+    evidence: ['PDF / TXT / DOCX lineage', 'PostgreSQL + Chroma reconciliation', '331 backend checks + frontend lint/build', 'Controlled local demo with source citations'],
+    limits: 'Local and CI evidence; the demo is reproducible locally, not a deployed public service. No production-scale, authentication, or monitoring claim.',
     tags: ['Python', 'FastAPI', 'PostgreSQL', 'Chroma', 'MinIO', 'Alembic'],
     href: 'https://github.com/tonthatgiahuy16/CloudMentor-AI',
+    image: {
+      src: '/cloudmentor-demo-chat.png',
+      alt: 'CloudMentor local demo answering a data-lineage question with source references',
+      caption: 'Local reproducible demo — answer grounded in seeded sources with chunk-level references.',
+    },
   },
   {
     number: '02',
@@ -108,6 +115,18 @@ export default function Home() {
                   <div className="case-grid">
                     <div className="case-narrative">
                       <p className="case-summary">{project.summary}</p><p>{project.description}</p>
+                      {project.image && (
+                        <figure className="case-demo">
+                          <Image
+                            src={project.image.src}
+                            alt={project.image.alt}
+                            width={1919}
+                            height={1080}
+                            sizes="(max-width: 720px) 100vw, 55vw"
+                          />
+                          <figcaption>{project.image.caption}</figcaption>
+                        </figure>
+                      )}
                       <ul className="tag-list" aria-label={`${project.title} technologies`}>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
                     </div>
                     <div className="system-trace" aria-label={`${project.title} data flow`}>
