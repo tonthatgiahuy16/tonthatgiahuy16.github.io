@@ -115,18 +115,6 @@ export default function Home() {
                   <div className="case-grid">
                     <div className="case-narrative">
                       <p className="case-summary">{project.summary}</p><p>{project.description}</p>
-                      {project.image && (
-                        <figure className="case-demo">
-                          <Image
-                            src={project.image.src}
-                            alt={project.image.alt}
-                            width={1919}
-                            height={1080}
-                            sizes="(max-width: 720px) 100vw, 55vw"
-                          />
-                          <figcaption>{project.image.caption}</figcaption>
-                        </figure>
-                      )}
                       <ul className="tag-list" aria-label={`${project.title} technologies`}>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
                     </div>
                     <div className="system-trace" aria-label={`${project.title} data flow`}>
@@ -138,6 +126,18 @@ export default function Home() {
                       <div className="limit-note"><p className="micro-label">Boundary</p><p>{project.limits}</p></div>
                     </div>
                   </div>
+                  {project.image && (
+                    <figure className="case-demo">
+                      <Image
+                        src={project.image.src}
+                        alt={project.image.alt}
+                        width={1887}
+                        height={865}
+                        sizes="(max-width: 720px) 100vw, 75vw"
+                      />
+                      <figcaption>{project.image.caption}</figcaption>
+                    </figure>
+                  )}
                   <footer className="case-footer"><span>Repository</span><a href={project.href} target="_blank" rel="noreferrer">Inspect {project.title} ↗</a></footer>
                 </article>
               ))}
